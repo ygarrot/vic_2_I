@@ -139,10 +139,13 @@ def tutorial(
     # plot_images(steps)
 
 # images = glob.glob(without_path + 'Corn*/*')
-images = glob.glob(root_path + 'Corn*/*')
+images = glob.glob(root_path + 'Peach___Bacterial_spot/*')
 for img_path in images:
     # img_path = without_path + img_path
-    tutorial(img_path)
+    try:
+        tutorial(img_path)
+    except:
+        continue
     # img_path = images[index]
     #img, path, filename = pcv.readimage(img_path, mode='rgb')
 
